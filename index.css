@@ -1,0 +1,132 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@300;400&display=swap');
+
+/* Body styling */
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+/* Styling for the login container */
+.container {
+  max-width: 400px;
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+/* Heading styling */
+h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+h2:after {
+  content: '';
+  width: 80px;
+  height: 4px;
+  background-color: #6a11cb;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -10px;
+  border-radius: 50px;
+}
+
+/* Login form styling */
+#loginForm {
+  padding: 30px;
+  border-radius: 15px;
+}
+
+/* Label styling */
+.form-group label {
+  font-size: 16px;
+  color: #444;
+  margin-bottom: 10px;
+  display: block;
+  font-weight: 500;
+}
+
+/* Input field styling */
+.form-control {
+  border-radius: 8px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  width: 100%;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+  background-color: #f4f7fc;
+}
+
+.form-control:focus {
+  border-color: #6a11cb;
+  box-shadow: 0 0 8px rgba(106, 17, 203, 0.2);
+}
+
+/* Button styling */
+.btn {
+  background-color: #6a11cb;
+  color: white;
+  font-weight: 600;
+  padding: 15px;
+  font-family: 'Poppins', sans-serif;
+  border-radius: 8px;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #2575fc;
+  transform: scale(1.05);
+}
+
+/* Error message styling */
+#errorMessage {
+  font-size: 14px;
+  color: #ff4d4d;
+  font-family: 'Poppins', sans-serif;
+  margin-top: 10px;
+}
+
+/* Add subtle animation to container */
+.container {
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Additional styles for smaller screens */
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+}

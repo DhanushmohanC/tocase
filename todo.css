@@ -1,0 +1,200 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@300;400&display=swap');
+
+/* Basic body styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #74ebd5, #acb6e5);
+  margin: 0;
+  padding: 0;
+  color: #333;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Styling the navigation bar */
+.navbar {
+  background-color: #3498db; /* Simple solid blue color */
+  padding: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+/* Navbar brand */
+.navbar-brand {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: white;
+  font-size: 24px;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+/* Navbar links */
+.nav-link {
+  color: white !important;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 8px 15px;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #ecf0f1 !important;
+}
+
+/* Enhanced H2 Heading Styles */
+h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 36px;
+  color: #2c3e50; /* Darker shade for better contrast */
+  text-align: center;
+  margin: 40px 0 20px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase; /* Uppercase for a bold look */
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+  transition: color 0.3s ease;
+}
+
+/* Add decorative underline */
+h2:after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 5px;
+  background-color: #e74c3c; /* Bright underline color */
+  margin: 15px auto 0;
+  border-radius: 5px;
+  transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+/* Hover effect */
+h2:hover {
+  color: #e74c3c; /* Change heading color on hover */
+}
+
+h2:hover:after {
+  width: 120px; /* Widen underline on hover */
+  background-color: #3498db; /* Change underline color on hover */
+}
+
+/* Animated bounce effect on hover */
+h2:hover {
+  transform: translateY(-5px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  h2 {
+    font-size: 28px;
+  }
+
+  h2:after {
+    width: 60px;
+  }
+
+  h2:hover:after {
+    width: 100px;
+  }
+}
+
+
+/* ToDo list container */
+.todo-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.95); /* Slightly more opaque */
+  border-radius: 12px; /* Slightly larger border-radius for a softer look */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15); /* Enhanced shadow */
+  overflow: hidden; /* To ensure smooth border-radius effect */
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%); /* Centering vertically */
+  scroll-behavior: smooth; /* Smooth scrolling */
+}
+
+/* ToDo list styles */
+.list-group-item {
+  background-color: #ffffff;
+  border: none;
+  border-radius: 10px; /* Slightly more rounded corners */
+  margin-bottom: 15px;
+  padding: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.list-group-item:hover {
+  background-color: #f9f9f9; /* Light hover background */
+  transform: translateY(-3px); /* Slight lift effect */
+  cursor: pointer;
+}
+
+/* Checkbox styling */
+.list-group-item input[type="checkbox"] {
+  transform: scale(1.3);
+  margin-left: 10px;
+  cursor: pointer;
+  accent-color: #3498db; /* Matching button color */
+}
+
+/* Footer styles */
+footer {
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  color: #666;
+  padding: 15px;
+  background-color: #f1f1f1; /* Lighter footer background */
+  border-top: 1px solid #ddd; /* Subtle border on top */
+}
+
+/* Button styles */
+.btn-primary {
+  background-color: #3498db;
+  border: none;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  padding: 12px 20px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: #2980b9;
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .todo-container {
+    width: 90%;
+    padding: 15px;
+    top: 0; /* Remove vertical centering on small screens */
+    transform: none; /* Remove transformation for smaller screens */
+  }
+
+  h3 {
+    font-size: 28px;
+  }
+
+  .list-group-item {
+    font-size: 16px;
+    padding: 12px;
+  }
+
+  .btn-primary {
+    width: 100%;
+  }
+}
